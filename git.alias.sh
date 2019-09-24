@@ -174,6 +174,7 @@ alias gstc='git stash clear'
 alias gstd='git stash drop'
 alias gstl='git stash list'
 alias gstp='git stash pop'
+alias gstsu='git stash save -u'
 
 alias gsmi='git submodule init'
 alias gsmu='git submodule update'
