@@ -97,7 +97,7 @@ alias gpllum='git pull upstream master'
 alias gplocb='git pull origin "$(git_current_branch)"'
 alias gpsocb='git push origin "$(git_current_branch)"'
 
-alias gbrsup='git branch --set-upstream-to=origin/$(git_current_branch)'
+alias gbrsuocb='git branch --set-upstream-to=origin/$(git_current_branch)'
 
 alias glg='git log'
 alias glgp='git log --stat -p'
