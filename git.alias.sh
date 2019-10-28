@@ -69,6 +69,7 @@ alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 
 alias gdf='git diff'
+alias gdfocb='git diff origin/$(git_current_branch)'
 alias gdfno='git diff --name-only'
 alias gdfis='git diff --ignore-all-space'
 alias gdfwd='git diff --word-diff'
@@ -155,6 +156,7 @@ alias grlcb='git reflog $(git_current_branch)'
 
 alias grs='git reset'
 alias grsh='git reset --hard'
+alias grsocb='git reset origin/$(git_current_branch)'
 alias grshocb='git reset --hard origin/$(git_current_branch)'
 alias grs!='git reset --'
 
