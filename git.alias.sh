@@ -75,16 +75,14 @@ alias gdfis='git diff --ignore-all-space'
 alias gdfwd='git diff --word-diff'
 alias gdfca='git diff --cached'
 alias gdfcawd='git diff --cached --word-diff'
-#alias gdfs='git diff --staged'
-#alias gdft='git diff-tree --no-commit-id --name-only -r'
+
+alias gdfm='git diff master'
 alias gdfh='git diff HEAD'
 alias gdfh1='git diff HEAD~1'
 alias gdfh2='git diff HEAD~2'
 alias gdfh3='git diff HEAD~3'
 alias gdfh4='git diff HEAD~4'
 alias gdfh5='git diff HEAD~5'
-
-#alias gdct='git describe --tags $(git rev-list --tags --max-count=1)'
 
 alias gft='git fetch'
 alias gfta='git fetch --all'
