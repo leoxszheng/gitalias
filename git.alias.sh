@@ -149,6 +149,8 @@ alias grbm='git rebase master'
 alias grbd='git rebase develop'
 alias grbom='git fetch;git rebase origin/master'
 alias grbiom='git fetch;git rebase -i origin/master'
+alias grbocb='git fetch;git rebase origin/$(git_current_branch)'
+alias grbiocb='git fetch;git rebase -i origin/$(git_current_branch)'
 
 alias grv='git revert'
 alias grl='git reflog'
