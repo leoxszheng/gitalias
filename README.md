@@ -1,6 +1,6 @@
 # gitalias
 
-gitalias provides many [aliases](#aliases)
+gitalias provides many [aliases](#Abbravate)
 
 
 ## Abbravate
