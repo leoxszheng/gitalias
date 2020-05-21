@@ -19,7 +19,7 @@ alias g='git'
 
 alias gad='git add'
 alias gada='git add --all'
-alias gadpa='git add --patch'
+alias gadp='git add --patch'
 alias gadu='git add --update'
 alias gadv='git add --verbose'
 
