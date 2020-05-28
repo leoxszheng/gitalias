@@ -74,6 +74,8 @@ alias gdfis='git diff --ignore-all-space'
 alias gdfocb='git diff origin/$(git_current_branch)'
 alias gdfisocb='git diff --ignore-all-space origin/$(git_current_branch)'
 alias gdfca='git diff --cached'
+alias gdfcd='git diff --word-diff-regex=.'
+alias gdfcacd='git diff --cached --word-diff-regex=.'
 alias gdfwd='git diff --word-diff'
 alias gdfcawd='git diff --cached --word-diff'
 
