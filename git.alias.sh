@@ -168,7 +168,10 @@ alias grbiom='git fetch;git rebase -i origin/master'
 alias grbocb='git fetch;git rebase origin/$(git_current_branch)'
 alias grbiocb='git fetch;git rebase -i origin/$(git_current_branch)'
 
-alias grv='git revert'
+alias grv='git revert --no-edit'
+alias grva='git revert --abort'
+alias grvc='git revert --continue'
+alias grvs='git revert --skip'
 alias grl='git reflog'
 alias grlcb='git reflog $(git_current_branch)'
 
