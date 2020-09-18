@@ -7,7 +7,7 @@
 # the plugin, before being pulled in to core lib/git.zsh as git_current_branch()
 # to fix the core -> git plugin dependency.
 function current_branch() {
-  git_current_branch
+    git symbolic-ref --short -q HEAD 2>/dev/null
 }
 
 #
@@ -71,8 +71,8 @@ alias gcpc='git cherry-pick --continue'
 alias gdf='git diff'
 alias gdfno='git diff --name-only'
 alias gdfis='git diff --ignore-all-space'
-alias gdfocb='git diff origin/$(git_current_branch)'
-alias gdfisocb='git diff --ignore-all-space origin/$(git_current_branch)'
+alias gdfocb='git diff origin/`current_branch`'
+alias gdfisocb='git diff --ignore-all-space origin/`current_branch`'
 alias gdfca='git diff --cached'
 alias gdfcd='git diff --word-diff-regex=.'
 alias gdfcacd='git diff --cached --word-diff-regex=.'
@@ -104,10 +104,10 @@ alias gpl='git pull -p'
 alias gplrb='git pull --rebase'
 alias gplrbv='git pull --rebase -v'
 alias gpllum='git pull upstream master'
-alias gplocb='git pull origin "$(git_current_branch)"'
-alias gpsocb='git push origin "$(git_current_branch)"'
+alias gplocb='git pull origin "`current_branch`"'
+alias gpsocb='git push origin "`current_branch`"'
 
-alias gbrsuocb='git branch --set-upstream-to=origin/$(git_current_branch)'
+alias gbrsuocb='git branch --set-upstream-to=origin/`current_branch`'
 
 alias glg='git log'
 alias glgp='git log --stat -p'
@@ -127,7 +127,7 @@ alias gmg='git merge'
 alias gmgm='git merge master'
 alias gmgd='git merge develop'
 alias gmgh='git merge hotfix'
-alias gmgocb='git merge origin/$(git_current_branch)'
+alias gmgocb='git merge origin/`current_branch`'
 alias gmga='git merge --abort'
 alias gmgc='git merge --continue'
 
@@ -141,7 +141,7 @@ alias gpsf='git push --force-with-lease'
 alias gpsf!='git push --force'
 alias gpsoat='git push origin --all && git push origin --tags'
 alias gpsu='git push upstream'
-alias gpssup='git push --set-upstream origin $(git_current_branch)'
+alias gpssup='git push --set-upstream origin `current_branch`'
 
 alias grm='git remote'
 alias grma='git remote add'
@@ -165,20 +165,20 @@ alias grbm='git rebase master'
 alias grbd='git rebase develop'
 alias grbom='git fetch;git rebase origin/master'
 alias grbiom='git fetch;git rebase -i origin/master'
-alias grbocb='git fetch;git rebase origin/$(git_current_branch)'
-alias grbiocb='git fetch;git rebase -i origin/$(git_current_branch)'
+alias grbocb='git fetch;git rebase origin/`current_branch`'
+alias grbiocb='git fetch;git rebase -i origin/`current_branch`'
 
 alias grv='git revert --no-edit'
 alias grva='git revert --abort'
 alias grvc='git revert --continue'
 alias grvs='git revert --skip'
 alias grl='git reflog'
-alias grlcb='git reflog $(git_current_branch)'
+alias grlcb='git reflog `current_branch`'
 
 alias grs='git reset'
 alias grsh='git reset --hard'
-alias grsocb='git reset origin/$(git_current_branch)'
-alias grshocb='git reset --hard origin/$(git_current_branch)'
+alias grsocb='git reset origin/`current_branch`'
+alias grshocb='git reset --hard origin/`current_branch`'
 alias grs!='git reset --'
 
 alias gr='git rm'
